@@ -1,0 +1,14 @@
+{
+  "name": "Per Sara",
+  "short_name": "Per Sara",
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2A1230",
+  "theme_color": "#2A1230",
+  "description": "Un dono scritto a mano, in forma di applicazione.",
+  "icons": [
+    { "src": "icona-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icona-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

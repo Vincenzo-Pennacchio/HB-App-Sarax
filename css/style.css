@@ -1,0 +1,433 @@
+/* =========================================================================
+   Per Sara — foglio di stile
+   Palette: notte di prugna, ceralacca viola, foglia d'oro, pergamena.
+   ========================================================================= */
+
+:root{
+  /* colore */
+  --notte:      #2A1230;
+  --notte-alta: #3A1A44;
+  --prugna:     #4A2159;
+  --ceralacca:  #6B2E9E;
+  --glicine:    #C6A2E0;
+  --oro:        #C9A227;
+  --oro-chiaro: #E8D49A;
+  --pergamena:  #F1E7D4;
+  --inchiostro: #33203B;
+
+  /* carattere */
+  --display: "Italiana", serif;
+  --testo:   "Cormorant Garamond", Georgia, serif;
+  --utile:   "Karla", system-ui, sans-serif;
+
+  /* misure (scala aurea, φ ≈ 1.618) */
+  --s1: .5rem;
+  --s2: .81rem;
+  --s3: 1.31rem;
+  --s4: 2.12rem;
+  --s5: 3.43rem;
+
+  --bordo-oro: 1px solid rgba(201,162,39,.38);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html,body{ margin:0; padding:0; }
+
+body{
+  min-height:100svh;
+  background:
+    radial-gradient(120% 80% at 50% -10%, #4A2159 0%, transparent 60%),
+    radial-gradient(90% 60% at 100% 100%, #3A1A44 0%, transparent 55%),
+    var(--notte);
+  background-attachment:fixed;
+  color:var(--pergamena);
+  font-family:var(--testo);
+  font-size:1.06rem;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* trama damascata appena percettibile */
+body::before{
+  content:"";
+  position:fixed; inset:0;
+  pointer-events:none;
+  opacity:.16;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(198,162,224,.5) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 60%, rgba(232,212,154,.4) 0 1px, transparent 2px);
+  background-size:46px 46px, 74px 74px;
+}
+
+button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
+
+:focus-visible{ outline:2px solid var(--oro-chiaro); outline-offset:3px; border-radius:2px; }
+
+/* =========================== SIGILLO D'INGRESSO ========================= */
+.ingresso{
+  position:fixed; inset:0; z-index:60;
+  display:grid; place-items:center;
+  padding:var(--s4);
+  background:
+    radial-gradient(70% 50% at 50% 40%, #4A2159 0%, #2A1230 70%);
+  transition:opacity .9s ease, visibility .9s;
+}
+.ingresso--aperto{ opacity:0; visibility:hidden; }
+
+.ingresso__busta{ text-align:center; max-width:22rem; }
+
+.ingresso__soprascritta{
+  font-family:var(--utile);
+  font-size:.66rem; letter-spacing:.32em; text-transform:uppercase;
+  color:var(--glicine); margin:0 0 var(--s2);
+}
+.ingresso__nome{
+  font-family:var(--display);
+  font-size:clamp(3.2rem,18vw,5rem);
+  font-weight:400; line-height:1; margin:0;
+  color:var(--oro-chiaro);
+  letter-spacing:.04em;
+}
+.ingresso__data{
+  font-family:var(--utile); font-size:.7rem; letter-spacing:.24em;
+  text-transform:uppercase; color:rgba(241,231,212,.55);
+  margin:var(--s2) 0 var(--s5);
+}
+
+.sigillo{ display:block; margin:0 auto; }
+.sigillo__svg{ width:clamp(7rem,34vw,9rem); height:auto; display:block; margin:0 auto;
+  filter:drop-shadow(0 10px 22px rgba(0,0,0,.55));
+  animation:respiro 4s ease-in-out infinite; }
+.sigillo__cera{ fill:var(--ceralacca); }
+.sigillo__bordo{ fill:none; stroke:rgba(255,255,255,.22); stroke-width:1.5; }
+.sigillo__iniziale{
+  font-family:var(--display); font-size:44px; fill:rgba(255,255,255,.82);
+  text-anchor:middle; dominant-baseline:central;
+}
+.sigillo__istruzione{
+  display:block; margin-top:var(--s3);
+  font-family:var(--utile); font-size:.68rem; letter-spacing:.28em;
+  text-transform:uppercase; color:var(--glicine);
+}
+.sigillo--rotto .sigillo__svg{ animation:rompi .8s ease forwards; }
+.sigillo--rotto .sigillo__istruzione{ opacity:0; transition:opacity .3s; }
+
+@keyframes respiro{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.045); } }
+@keyframes rompi{
+  0%{ transform:scale(1) rotate(0); }
+  30%{ transform:scale(.9) rotate(-6deg); }
+  100%{ transform:scale(2.6) rotate(10deg); opacity:0; }
+}
+
+/* ============================== IMPIANTO ================================ */
+.app{
+  position:relative; z-index:1;
+  padding:var(--s5) var(--s3) calc(6.5rem + env(safe-area-inset-bottom));
+  max-width:34rem; margin:0 auto;
+}
+
+.veduta[hidden]{ display:none; }
+.veduta--attiva{ animation:entra .55s ease both; }
+@keyframes entra{ from{ opacity:0; transform:translateY(14px);} to{ opacity:1; transform:none; } }
+
+.titolo-veduta{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(2.2rem,11vw,3rem); line-height:1.05;
+  color:var(--oro-chiaro); margin:0 0 var(--s1); text-align:center;
+  letter-spacing:.02em;
+}
+.sottotitolo-veduta{
+  font-family:var(--utile); font-size:.68rem; letter-spacing:.2em;
+  text-transform:uppercase; text-align:center;
+  color:rgba(198,162,224,.85); margin:0 0 var(--s4);
+}
+
+/* ============================ FRONTESPIZIO ============================== */
+.frontespizio{ text-align:center; padding-top:var(--s4); }
+.occhiello{
+  font-family:var(--utile); font-size:.68rem; letter-spacing:.34em;
+  text-transform:uppercase; color:var(--glicine); margin:0 0 var(--s2);
+}
+.frontespizio__nome{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(4rem,24vw,6.5rem); line-height:.95; margin:0;
+  color:var(--oro-chiaro);
+}
+.fregio{ display:flex; align-items:center; justify-content:center; gap:var(--s2); margin:var(--s3) 0; }
+.fregio__linea{ height:1px; width:3.4rem; background:linear-gradient(90deg,transparent,var(--oro)); }
+.fregio__linea:last-child{ background:linear-gradient(270deg,transparent,var(--oro)); }
+.fregio__fiore{ width:1.4rem; height:1.4rem; fill:var(--oro); }
+
+.epigrafe{
+  font-style:italic; font-size:1.14rem; line-height:1.7;
+  color:rgba(241,231,212,.9); margin:0 auto var(--s3); max-width:26rem;
+}
+.frontespizio__data{
+  font-family:var(--utile); font-size:.66rem; letter-spacing:.26em;
+  text-transform:uppercase; color:rgba(241,231,212,.5); margin:0;
+}
+
+.invito{
+  display:block; margin:var(--s5) auto 0;
+  padding:.85rem 1.9rem;
+  border:var(--bordo-oro); border-radius:999px;
+  font-family:var(--utile); font-size:.7rem; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--oro-chiaro);
+  background:rgba(107,46,158,.22);
+  transition:background .3s, transform .2s;
+}
+.invito:active{ transform:scale(.97); background:rgba(107,46,158,.4); }
+
+/* ============================== LETTERE ================================= */
+.pila-lettere{ display:flex; flex-direction:column; gap:var(--s3); }
+
+.lettera-chiusa{
+  position:relative; width:100%; text-align:left;
+  padding:var(--s3) var(--s3) var(--s3) 5.4rem;
+  border:var(--bordo-oro); border-radius:3px;
+  background:
+    linear-gradient(160deg, rgba(241,231,212,.09), rgba(241,231,212,.03));
+  transition:transform .25s, border-color .25s, background .25s;
+}
+.lettera-chiusa:active{ transform:scale(.985); }
+.lettera-chiusa--letta{ border-color:rgba(201,162,39,.7); background:rgba(107,46,158,.16); }
+
+.lettera-chiusa__sigillo{
+  position:absolute; left:var(--s3); top:50%; transform:translateY(-50%);
+  width:3.1rem; height:3.1rem; border-radius:50%;
+  display:grid; place-items:center;
+  background:radial-gradient(circle at 34% 30%, #8B3FC4, var(--ceralacca) 60%, #4A1D72);
+  box-shadow:0 4px 12px rgba(0,0,0,.4), inset 0 1px 2px rgba(255,255,255,.28);
+  font-family:var(--display); font-size:1.35rem; color:rgba(255,255,255,.85);
+}
+.lettera-chiusa--letta .lettera-chiusa__sigillo{
+  background:radial-gradient(circle at 34% 30%,#3F2249,#2A1230);
+  color:var(--oro); box-shadow:inset 0 1px 3px rgba(0,0,0,.6);
+}
+
+.lettera-chiusa__soprattitolo{
+  display:block; font-family:var(--utile); font-size:.6rem;
+  letter-spacing:.26em; text-transform:uppercase; color:var(--glicine);
+  margin-bottom:.25rem;
+}
+.lettera-chiusa__titolo{
+  display:block; font-family:var(--display); font-size:1.5rem;
+  color:var(--oro-chiaro); line-height:1.2;
+}
+.lettera-chiusa__azione{
+  display:block; margin-top:.4rem;
+  font-family:var(--utile); font-size:.62rem; letter-spacing:.2em;
+  text-transform:uppercase; color:rgba(241,231,212,.55);
+}
+
+/* la lettera aperta, su pergamena */
+.pergamena{
+  background:
+    radial-gradient(120% 90% at 30% 0%, #FBF4E4 0%, var(--pergamena) 55%, #E2D2B6 100%);
+  color:var(--inchiostro);
+  padding:var(--s4) var(--s3) var(--s4);
+  border-radius:2px;
+  box-shadow:0 24px 50px rgba(0,0,0,.5);
+  animation:dispiega .6s ease both;
+}
+@keyframes dispiega{
+  from{ opacity:0; transform:perspective(900px) rotateX(-16deg) translateY(20px); transform-origin:top; }
+  to{ opacity:1; transform:none; }
+}
+
+.pergamena__intestazione{
+  display:flex; justify-content:space-between; align-items:baseline;
+  font-family:var(--utile); font-size:.58rem; letter-spacing:.2em;
+  text-transform:uppercase; color:rgba(51,32,59,.55);
+  border-bottom:1px solid rgba(51,32,59,.18); padding-bottom:var(--s1);
+  margin-bottom:var(--s3); gap:var(--s2);
+}
+.pergamena__titolo{
+  font-family:var(--display); font-size:2.1rem; line-height:1.1;
+  color:var(--ceralacca); margin:0 0 var(--s3); text-align:center;
+}
+.pergamena__apertura{ font-style:italic; font-size:1.16rem; margin:0 0 var(--s2); }
+.pergamena__testo{ margin:0 0 var(--s3); font-size:1.12rem; line-height:1.72; text-align:left; }
+.pergamena__testo--primo::first-letter{
+  font-family:var(--display); font-size:3.4rem; line-height:.8;
+  float:left; padding:.2rem .5rem .1rem 0; color:var(--ceralacca);
+}
+.pergamena__chiusura{ font-style:italic; margin:var(--s3) 0 0; text-align:right; }
+.pergamena__firma{
+  font-family:var(--display); font-size:2rem; color:var(--ceralacca);
+  text-align:right; margin:.2rem 0 0; line-height:1;
+}
+.pergamena__poscritto{
+  margin-top:var(--s3); padding-top:var(--s2);
+  border-top:1px solid rgba(51,32,59,.18);
+  font-size:.98rem; font-style:italic; color:rgba(51,32,59,.75);
+}
+
+/* ============================== GALLERIA =============================== */
+.galleria{ display:grid; grid-template-columns:repeat(2,1fr); gap:var(--s2); }
+
+.telaio{
+  position:relative; display:block; padding:0; width:100%;
+  border:var(--bordo-oro); border-radius:2px; overflow:hidden;
+  background:rgba(255,255,255,.04);
+  aspect-ratio:3/4;
+  opacity:0; transform:translateY(18px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.telaio--visibile{ opacity:1; transform:none; }
+.telaio img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
+.telaio:active img{ transform:scale(1.04); }
+
+.telaio__didascalia{
+  position:absolute; left:0; right:0; bottom:0;
+  padding:1.6rem .6rem .55rem;
+  background:linear-gradient(transparent, rgba(42,18,48,.92));
+  text-align:left;
+}
+.telaio__titolo{
+  display:block; font-family:var(--display); font-size:1rem;
+  color:var(--pergamena); line-height:1.15;
+}
+.telaio__data{
+  display:block; font-family:var(--utile); font-size:.55rem;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--glicine);
+  margin-top:.15rem;
+}
+.telaio__mancante{
+  position:absolute; inset:0; display:grid; place-items:center; text-align:center;
+  font-family:var(--utile); font-size:.6rem; letter-spacing:.16em;
+  text-transform:uppercase; color:rgba(241,231,212,.45); padding:var(--s2);
+}
+
+/* =============================== TEATRO ================================= */
+.palchi{ display:flex; flex-direction:column; gap:var(--s4); }
+.palco{ border:var(--bordo-oro); border-radius:2px; overflow:hidden; background:rgba(0,0,0,.28); }
+.palco video{ width:100%; display:block; background:#150920; }
+.palco__didascalia{ padding:var(--s2) var(--s3) var(--s3); }
+.palco__titolo{
+  font-family:var(--display); font-size:1.5rem; color:var(--oro-chiaro);
+  margin:0 0 .25rem; line-height:1.15;
+}
+.palco__dedica{ margin:0; font-style:italic; color:rgba(241,231,212,.85); font-size:1.02rem; }
+
+/* =============================== BLASONE ================================ */
+.stemma{ text-align:center; }
+.stemma__svg{ width:min(62vw,15rem); height:auto; margin:0 auto var(--s3); display:block;
+  filter:drop-shadow(0 12px 26px rgba(0,0,0,.5)); }
+.stemma__casata{
+  font-family:var(--display); font-size:2.2rem; color:var(--oro-chiaro);
+  margin:0 0 .2rem; line-height:1.1;
+}
+.stemma__motto{
+  font-style:italic; font-size:1.2rem; color:var(--glicine); margin:0 0 var(--s4);
+}
+.stemma__lettura{ list-style:none; margin:0 0 var(--s3); padding:0; text-align:left; }
+.stemma__voce{
+  display:flex; gap:var(--s2); padding:var(--s2) 0;
+  border-top:1px solid rgba(201,162,39,.2);
+}
+.stemma__simbolo{
+  flex:0 0 6.6rem; font-family:var(--utile); font-size:.62rem;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--oro);
+  padding-top:.35rem;
+}
+.stemma__significato{ margin:0; font-size:1.02rem; color:rgba(241,231,212,.88); }
+.stemma__curiosita{
+  font-family:var(--utile); font-size:.66rem; letter-spacing:.08em;
+  color:rgba(198,162,224,.7); border-top:1px solid rgba(201,162,39,.2);
+  padding-top:var(--s2); margin:0;
+}
+
+/* =============================== CONGEDO ================================ */
+.congedo{
+  margin-top:var(--s5); padding-top:var(--s4);
+  border-top:var(--bordo-oro); text-align:center;
+}
+.congedo__titolo{
+  font-family:var(--display); font-size:2rem; color:var(--oro-chiaro); margin:0 0 var(--s2);
+}
+.congedo__testo{ font-style:italic; font-size:1.1rem; margin:0 0 var(--s2); color:rgba(241,231,212,.9); }
+.congedo__firma{ font-family:var(--display); font-size:2.2rem; color:var(--glicine); margin:var(--s3) 0 0; }
+
+/* ============================ NAVIGAZIONE =============================== */
+.navigazione{
+  position:fixed; left:0; right:0; bottom:0; z-index:30;
+  display:flex; justify-content:space-around;
+  padding:.55rem .3rem calc(.55rem + env(safe-area-inset-bottom));
+  background:rgba(30,11,36,.92);
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  border-top:var(--bordo-oro);
+}
+.navigazione__voce{
+  display:flex; flex-direction:column; align-items:center; gap:.15rem;
+  flex:1; padding:.3rem .1rem;
+  font-family:var(--utile); font-size:.55rem; letter-spacing:.14em;
+  text-transform:uppercase; color:rgba(241,231,212,.5);
+  transition:color .25s;
+}
+.navigazione__glifo{ font-size:1.05rem; line-height:1; }
+.navigazione__voce--attiva{ color:var(--oro-chiaro); }
+
+/* ============================== MUSICA ================================== */
+.musica[hidden]{ display:none; }
+.musica{
+  position:fixed; top:calc(.8rem + env(safe-area-inset-top)); right:.8rem; z-index:31;
+  display:flex; align-items:center; gap:.4rem;
+  padding:.4rem .8rem; border-radius:999px; border:var(--bordo-oro);
+  background:rgba(30,11,36,.8); backdrop-filter:blur(10px);
+  font-family:var(--utile); font-size:.58rem; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--glicine);
+}
+.musica[aria-pressed="true"]{ color:var(--oro-chiaro); border-color:var(--oro); }
+
+/* =============================== VISORE ================================= */
+.visore{
+  position:fixed; inset:0; z-index:50;
+  overflow-y:auto; -webkit-overflow-scrolling:touch;
+  background:rgba(20,7,26,.96);
+  backdrop-filter:blur(6px);
+  padding:calc(3.6rem + env(safe-area-inset-top)) var(--s3) calc(var(--s5) + env(safe-area-inset-bottom));
+  animation:sfuma .3s ease both;
+}
+@keyframes sfuma{ from{ opacity:0; } to{ opacity:1; } }
+
+.visore__chiudi{
+  position:fixed; top:calc(.7rem + env(safe-area-inset-top)); right:.8rem; z-index:2;
+  width:2.4rem; height:2.4rem; border-radius:50%;
+  border:var(--bordo-oro); background:rgba(30,11,36,.9);
+  color:var(--oro-chiaro); font-size:.9rem; line-height:1;
+}
+.visore__corpo{ max-width:34rem; margin:0 auto; }
+
+.visore__figura{ margin:0; }
+.visore__figura img{
+  width:100%; border-radius:2px; border:var(--bordo-oro); display:block;
+}
+.visore__titolo{
+  font-family:var(--display); font-size:2rem; color:var(--oro-chiaro);
+  margin:var(--s3) 0 .2rem; line-height:1.1;
+}
+.visore__data{
+  font-family:var(--utile); font-size:.6rem; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--glicine); margin:0 0 var(--s2);
+}
+.visore__dedica{
+  font-style:italic; font-size:1.1rem; color:rgba(241,231,212,.9);
+  border-left:2px solid var(--oro); padding-left:var(--s2); margin:0;
+}
+
+/* ============================== ACCESSIBILITÀ =========================== */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important; animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+  }
+  .telaio{ opacity:1; transform:none; }
+}
+
+@media (min-width:600px){
+  .galleria{ grid-template-columns:repeat(3,1fr); }
+  .app{ padding-left:var(--s4); padding-right:var(--s4); }
+}

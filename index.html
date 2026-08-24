@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Per Sara</title>
+<meta name="description" content="Un dono scritto a mano, in forma di applicazione.">
+<meta name="theme-color" content="#2A1230">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icona-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Karla:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============================ SIGILLO D'INGRESSO ====================== -->
+<div class="ingresso" id="ingresso">
+  <div class="ingresso__busta">
+    <p class="ingresso__soprascritta">Alla cortese attenzione di</p>
+    <h1 class="ingresso__nome" id="ingressoNome">Sara</h1>
+    <p class="ingresso__data" id="ingressoData"></p>
+
+    <button class="sigillo" id="sigilloApri" aria-label="Rompi il sigillo e apri il dono">
+      <svg class="sigillo__svg" viewBox="0 0 120 120" aria-hidden="true">
+        <path class="sigillo__cera" d="M60 4c9 0 12 7 20 9s14-2 20 5-1 14 2 21 9 12 5 20-11 8-14 15 1 15-6 19-13-1-20 2-10 10-19 8-10-9-18-11-15 2-19-5 2-14-1-21-9-12-5-20 11-8 14-15-1-15 6-19 13 1 20-2 9-6 15-6z"/>
+        <circle class="sigillo__bordo" cx="60" cy="60" r="36"/>
+        <text class="sigillo__iniziale" x="60" y="60" id="sigilloIniziale">S</text>
+      </svg>
+      <span class="sigillo__istruzione">Premi il sigillo</span>
+    </button>
+  </div>
+</div>
+
+<!-- ============================== APPLICAZIONE ========================== -->
+<main class="app" id="app" hidden>
+
+  <!-- ---------- Frontespizio ---------- -->
+  <section class="veduta veduta--attiva" id="v-frontespizio" data-veduta="frontespizio">
+    <header class="frontespizio">
+      <p class="occhiello" id="occhiello">Buon compleanno</p>
+      <h2 class="frontespizio__nome" id="frontNome">Sara</h2>
+      <div class="fregio" aria-hidden="true">
+        <span class="fregio__linea"></span>
+        <svg class="fregio__fiore" viewBox="0 0 24 24"><path d="M12 2c1.7 2.2 1.7 4.4 0 6.6C10.3 6.4 10.3 4.2 12 2zm10 10c-2.2 1.7-4.4 1.7-6.6 0 2.2-1.7 4.4-1.7 6.6 0zM12 22c-1.7-2.2-1.7-4.4 0-6.6 1.7 2.2 1.7 4.4 0 6.6zM2 12c2.2-1.7 4.4-1.7 6.6 0-2.2 1.7-4.4 1.7-6.6 0zm3.5-6.5c2.7.4 4.2 2 4.6 4.6-2.7-.4-4.2-2-4.6-4.6zm13 0c-.4 2.7-2 4.2-4.6 4.6.4-2.7 2-4.2 4.6-4.6zm0 13c-2.7-.4-4.2-2-4.6-4.6 2.7.4 4.2 2 4.6 4.6zm-13 0c.4-2.7 2-4.2 4.6-4.6-.4 2.7-2 4.2-4.6 4.6z"/></svg>
+        <span class="fregio__linea"></span>
+      </div>
+      <p class="epigrafe" id="epigrafe"></p>
+      <p class="frontespizio__data" id="frontData"></p>
+    </header>
+    <button class="invito" data-vai="lettere">Comincia dalle lettere</button>
+  </section>
+
+  <!-- ---------- Lettere ---------- -->
+  <section class="veduta" id="v-lettere" data-veduta="lettere" hidden>
+    <h2 class="titolo-veduta">Le lettere</h2>
+    <p class="sottotitolo-veduta">Tre missive. Rompi il sigillo per leggerle.</p>
+    <div class="pila-lettere" id="pilaLettere"></div>
+  </section>
+
+  <!-- ---------- Ritratto (foto) ---------- -->
+  <section class="veduta" id="v-ritratto" data-veduta="ritratto" hidden>
+    <h2 class="titolo-veduta">Il ritratto</h2>
+    <p class="sottotitolo-veduta">Tocca una fotografia per leggerne la dedica.</p>
+    <div class="galleria" id="galleria"></div>
+  </section>
+
+  <!-- ---------- Teatro (video) ---------- -->
+  <section class="veduta" id="v-teatro" data-veduta="teatro" hidden>
+    <h2 class="titolo-veduta">Il teatro</h2>
+    <p class="sottotitolo-veduta">Scene in movimento.</p>
+    <div class="palchi" id="palchi"></div>
+  </section>
+
+  <!-- ---------- Blasone + congedo ---------- -->
+  <section class="veduta" id="v-blasone" data-veduta="blasone" hidden>
+    <h2 class="titolo-veduta">Il blasone</h2>
+    <p class="sottotitolo-veduta">Ogni casata ha il suo stemma.</p>
+    <div id="blasone"></div>
+    <div class="congedo" id="congedo"></div>
+  </section>
+
+  <!-- ---------- Navigazione ---------- -->
+  <nav class="navigazione" id="navigazione" aria-label="Sezioni">
+    <button class="navigazione__voce navigazione__voce--attiva" data-vai="frontespizio">
+      <span class="navigazione__glifo" aria-hidden="true">✦</span><span>Inizio</span>
+    </button>
+    <button class="navigazione__voce" data-vai="lettere">
+      <span class="navigazione__glifo" aria-hidden="true">✉</span><span>Lettere</span>
+    </button>
+    <button class="navigazione__voce" data-vai="ritratto">
+      <span class="navigazione__glifo" aria-hidden="true">❋</span><span>Ritratto</span>
+    </button>
+    <button class="navigazione__voce" data-vai="teatro">
+      <span class="navigazione__glifo" aria-hidden="true">▷</span><span>Teatro</span>
+    </button>
+    <button class="navigazione__voce" data-vai="blasone">
+      <span class="navigazione__glifo" aria-hidden="true">♛</span><span>Blasone</span>
+    </button>
+  </nav>
+
+  <button class="musica" id="musica" hidden aria-pressed="false">
+    <span aria-hidden="true">♪</span><span class="musica__testo">Musica</span>
+  </button>
+</main>
+
+<!-- ============================== VISORE ================================ -->
+<div class="visore" id="visore" hidden role="dialog" aria-modal="true" aria-label="Dettaglio">
+  <button class="visore__chiudi" id="visoreChiudi" aria-label="Chiudi">✕</button>
+  <div class="visore__corpo" id="visoreCorpo"></div>
+</div>
+
+<script src="js/content.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
