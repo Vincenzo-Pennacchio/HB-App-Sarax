@@ -9,11 +9,11 @@ const CONTENUTI = {
   destinataria: "Sara",
   iniziale: "S",                      // lettera incisa nel sigillo di ceralacca
   occasione: "Buon compleanno",
-  data: "27 agosto 2026",             // <-- metti la data giusta
+  data: "20 agosto 2026",             // <-- metti la data giusta
   mittente: "Vincenzo",
 
   // Frase di apertura, stile "Lady Whistledown". Compare sul frontespizio.
-  epigrafe: "Cara lettrice, si dice che i doni più preziosi non si comprino: " +
+  epigrafe: "Cara Sara, si dice che i doni più preziosi non si comprino: " +
             "si scrivano. Quel che segue è la cronaca fedele di una stagione " +
             "in cui la protagonista, indiscutibilmente, sei tu.",
 
