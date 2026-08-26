@@ -76,10 +76,10 @@ const CONTENUTI = {
    * ---------------------------------------------------------------------- */
   foto: [
     {
-      src: "media/foto/esempio-1.jpg",
-      titolo: "La sera in cui ridevamo troppo",
-      data: "Estate 2024",
-      dedica: "Due righe su cosa stava succedendo in questa foto. Le dediche brevi funzionano meglio delle lunghe."
+      src: "media/foto/Io-e-sara.jpg",
+      titolo: "Capitan Burger check",
+      data: "Marzo 2023",
+      dedica: "Qui eravamo a puzzeul se mi ricordo bene, forse ero ubriaco d'altronde in quel periodo lo ero sempre lol."
     },
     {
       src: "media/foto/esempio-2.jpg",
