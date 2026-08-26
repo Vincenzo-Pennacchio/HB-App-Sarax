@@ -76,19 +76,19 @@ const CONTENUTI = {
    * ---------------------------------------------------------------------- */
   foto: [
     {
-      src: "media/foto/Io-e-sara.jpg",
+      src: "./media/foto/Io-e-sara.jpg",
       titolo: "Capitan Burger check",
       data: "Marzo 2023",
       dedica: "Qui eravamo a puzzeul se mi ricordo bene, forse ero ubriaco d'altronde in quel periodo lo ero sempre lol."
     },
     {
-      src: "media/foto/esempio-2.jpg",
+      src: "./media/foto/Io-con-occhiali-di-sara.jpg",
       titolo: "Un pomeriggio qualunque",
       data: "Inverno 2025",
       dedica: "Un altro ricordo, un'altra dedica."
     },
     {
-      src: "media/foto/esempio-3.jpg",
+      src: "./media/foto/Goku-napoletano.jpg",
       titolo: "Il viaggio",
       data: "Primavera 2025",
       dedica: "Aggiungi tutte le foto che vuoi: la galleria si adatta da sola."
