@@ -88,6 +88,18 @@ const CONTENUTI = {
       dedica: "Qui eravamo a puzzeul se mi ricordo bene, forse ero ubriaco d'altronde in quel periodo lo ero sempre lol."
     },
     {
+      src: "media/foto/Sara-sfocata.jpeg",
+      titolo: "Sara sfocata",
+      data: "25 Marzo 2023",
+      dedica: "Sara sfocata, non c'è altro da aggiungere perchè già se dici Sara stai dicendo già tutto."
+    },
+    {
+      src: "media/foto/Sara-sfocata-2.jpeg",
+      titolo: "Sara sfocata",
+      data: "25 Marzo 2023",
+      dedica: "Stessa cosa, però è un'altra foto."
+    },
+    {
       src: "media/foto/Sara-comicon.jpeg",
       titolo: "Sara al Comicon",
       data: "29 Aprile 2023",
@@ -106,7 +118,7 @@ const CONTENUTI = {
       dedica: "Qui come puoi ben vedere, faceva caldo e sudavo e il sudore andava negli occhi e come puoi immaginare non vedevo un cazzo."
     },
     {
-      src: "media/foto/Io-ubriaco-e-sara-frocida.jpeg",
+      src: "media/foto/Io-ubriaco-e-sara.jpeg",
       titolo: "Piazzetta della pace gang",
       data: "23 Aprile 2023",
       dedica: "I bei tempi in cui eravamo tutti altamente sobri e felici."
