@@ -78,20 +78,26 @@ const CONTENUTI = {
     {
       src: "media/foto/Io-e-sara.jpeg",
       titolo: "Capitan Burger check",
-      data: "Marzo 2023",
+      data: "25 Marzo 2023",
       dedica: "Qui eravamo a puzzeul se mi ricordo bene, forse ero ubriaco d'altronde in quel periodo lo ero sempre lol."
     },
     {
-      src: "media/foto/Io-con-occhiali-di-sara.jpeg",
-      titolo: "Un pomeriggio qualunque",
-      data: "Inverno 2025",
-      dedica: "Un altro ricordo, un'altra dedica."
+      src: "media/foto/Sara-comicon.jpeg",
+      titolo: "Sara al Comicon",
+      data: "29 Aprile 2023",
+      dedica: "Questa foto me la sono ritrovata in galleria a caso, e mi ha fatto sorridere perchè un selfie che ti sei fatta con il mio telefono vecchio che ho visto dopo tanto tempo. Ero felice di vederti felice, e non fraintendere lo sono ancora oggi."
+    },
+    {
+      src: "media/foto/comicum.jpeg",
+      titolo: "Comi***",
+      data: "29 Aprile 2023",
+      dedica: "Ricordo di quando c'era ancora un gruppo quasi unito e le cose erano più semplici. Ah già era sempre il periodo dove ero spesso ubriaco ma non credo lo fossi quel giorno."
     },
     {
       src: "media/foto/Goku-napoletano.jpeg",
-      titolo: "Il viaggio",
-      data: "Primavera 2025",
-      dedica: "Aggiungi tutte le foto che vuoi: la galleria si adatta da sola."
+      titolo: "Goku napoletano",
+      data: "29 Aprile 2023",
+      dedica: "L'unico e inimitabile Goku napoletano."
     }
   ],
 
@@ -101,10 +107,10 @@ const CONTENUTI = {
    * ---------------------------------------------------------------------- */
   video: [
     {
-      src: "media/video/esempio-1.mp4",
-      poster: "media/foto/esempio-1.jpg",
-      titolo: "Il video che non doveva esistere",
-      dedica: "Una riga di commento sotto al video."
+      src: "media/video/Sara-1.mp4",
+      poster: "media/foto/Io-con-occhiali-di-sara.jpeg",
+      titolo: "Qui non eravamo per nulla sobri",
+      dedica: "Qui eri l'unica persona sobria probabilmente, deve essere stato un pò come stare al circo."
     }
   ],
 
