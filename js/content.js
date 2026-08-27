@@ -13,7 +13,7 @@ const CONTENUTI = {
   mittente: "Vincenzo",
 
   // Frase di apertura, stile "Lady Whistledown". Compare sul frontespizio.
-  epigrafe: "Cara Sara, si dice che i doni più preziosi non si comprino: " +
+  epigrafe: "Cara lettrice, si dice che i doni più preziosi non si comprino: " +
             "si scrivano. Quel che segue è la cronaca fedele di una stagione " +
             "in cui la protagonista, indiscutibilmente, sei tu.",
 
@@ -98,6 +98,24 @@ const CONTENUTI = {
       titolo: "Comi***",
       data: "29 Aprile 2023",
       dedica: "Ricordo di quando c'era ancora un gruppo quasi unito e le cose erano più semplici. Ah già era sempre il periodo dove ero spesso ubriaco ma non credo lo fossi quel giorno."
+    },
+    {
+      src: "media/foto/Io-e-sara-frocida.jpeg",
+      titolo: "Frocida",
+      data: "18 Agosto 2022",
+      dedica: "Qui come puoi ben vedere, faceva caldo e sudavo e il sudore andava negli occhi e come puoi immaginare non vedevo un cazzo."
+    },
+    {
+      src: "media/foto/Io-ubriaco-e-sara-frocida.jpeg",
+      titolo: "Piazzetta della pace gang",
+      data: "23 Aprile 2023",
+      dedica: "I bei tempi in cui eravamo tutti altamente sobri e felici."
+    },
+    {
+      src: "media/foto/Sara-e-io-ubriaco-puddys.jpeg",
+      titolo: "Pub irlandese Puddys",
+      data: "26 Febbraio 2023",
+      dedica: "Adoravo andare in quel pub, mi hanno dato anche un cappello e un bicchiere di vetro free. Però era bello perchè c'eri tu."
     },
     {
       src: "media/foto/Goku-napoletano.jpeg",
