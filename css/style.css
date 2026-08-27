@@ -349,6 +349,10 @@ button{ font:inherit; color:inherit; background:none; border:none; cursor:pointe
   font-family:var(--display); font-size:2rem; color:var(--oro-chiaro); margin:0 0 var(--s2);
 }
 .congedo__testo{ font-style:italic; font-size:1.1rem; margin:0 0 var(--s2); color:rgba(241,231,212,.9); }
+.congedo__poscritto{
+  font-style:italic; font-size:1.02rem; color:rgba(198,162,224,.8);
+  margin:var(--s3) 0 0;
+}
 .congedo__firma{ font-family:var(--display); font-size:2.2rem; color:var(--glicine); margin:var(--s3) 0 0; }
 
 /* ============================ NAVIGAZIONE =============================== */

@@ -249,6 +249,7 @@
     box.appendChild(el("h3", "congedo__titolo", c.titolo));
     (c.testo || []).forEach((t) => box.appendChild(el("p", "congedo__testo", t)));
     if (c.firma) box.appendChild(el("p", "congedo__firma", c.firma));
+    if (c.poscritto) box.appendChild(el("p", "congedo__poscritto", c.poscritto));
   }
 
   /* ----------------------------------------------------------------- Visore */
