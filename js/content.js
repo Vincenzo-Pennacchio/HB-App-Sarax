@@ -20,7 +20,7 @@ const CONTENUTI = {
   // Musica di sottofondo (facoltativa). Metti un tuo file in media/audio/
   // e scrivi qui il percorso, es: "media/audio/valzer.mp3".
   // Lascia null per nascondere il pulsante della musica.
-  audio: null,
+  audio: "media/audio/245_nocturneop9no2-aa86d61b-ee90-4424-894d-adff33ce2a19.mp3",
 
   /* --- LE LETTERE ------------------------------------------------------- *
    * Ogni lettera arriva sigillata: Sara deve rompere il sigillo per aprirla.
@@ -31,34 +31,36 @@ const CONTENUTI = {
     {
       titolo: "Il primo incontro",
       sopratitolo: "Lettera prima",
-      luogo: "Napoli",
-      data: "Anno domini 2026",
+      luogo: "Pozzeul",
+      data: "Credo 2016",
       apertura: "Mia carissima Sara,",
       testo: [
-        "scrivo queste righe con la mano che trema appena, come si conviene a chi si accinge a raccontare qualcosa di importante. Qui va il tuo ricordo: il giorno in cui vi siete conosciuti, la prima cosa che hai pensato di lei, la scena che ti è rimasta addosso.",
-        "Sostituisci pure tutto questo testo con le tue parole. Puoi mettere quanti paragrafi vuoi: basta aggiungere una riga tra virgolette qui dentro, separata da una virgola."
+        "scrivo queste righe con la mano che trema appena, come si conviene a chi si accinge a raccontare qualcosa di importante. La prima volta che ci siamo conosciuti è stata una di quelle occasioni che non si dimenticano: ovvero un uscita random in piazzetta della pace quando ancora esisteva il gruppo no name no(chi sa che fine hanno fatto). Eppure, nonostante la casualità dell'incontro, ricordo distintamente il tuo sorriso e la tua risata contagiosa e le tue urla da ubriaca. Da quel momento, all'inizio però non mi piacevi, perchè ero/sono timido e non sapevo come comportarmi con te, ma poi ho iniziato a notare le tue qualità e a capire che eri una persona speciale.",
+        "Da allora, ogni volta che ci siamo visti, ho avuto la fortuna di conoscerti meglio e di apprezzare la tua intelligenza, la tua gentilezza e il tuo senso dell'umorismo. Sei una persona che sa ascoltare, che sa dare consigli saggi e che sa far sentire gli altri a proprio agio. La tua presenza rende le giornate più luminose e le conversazioni più interessanti. Quindi sono molto felice di essermi sbagliato sul tuo conto.",
+        "Da quando ci siamo conosciuti è stato bello vedere quante cose abbiamo in comune come game of thrones, i quattro bianchi(ok forse non più adesso però comunque), lady bug, Follettina creation, Renny, il condividere le passioni e i nostri sogni mentre eravamo sdraiati sugli scogli di Via Napoli, e anche le differenze che ci rendono unici. Abbiamo condiviso momenti di gioia, di risate, di avventure e anche i momenti di silenzio e di dolore, e sono grato per ogni singolo ricordo che abbiamo creato insieme.",
+        "In conclusione, voglio dirti che sono grato per averti incontrata e per aver avuto l'opportunità di conoscerti meglio. Spero che la nostra amicizia continui a crescere e a rafforzarsi nel tempo anche se so che non ci vediamo praticamente mai non importa voglio che tu sappia che puoi sempre contare su di me come io conto su di te."
       ],
       chiusura: "Con devoto affetto,",
-      firma: "Vincenzo",
-      poscritto: "P.S. — I poscritti sono la parte migliore di ogni lettera."
+      firma: "Penny",
+      poscritto: "P.S. — Di Renny non me ne ricordavo nemmeno io, è stato tipo un lampo di genio che mi è venuto in mente non so se tu te lo sei ricordata alla prima volta."
     },
     {
       titolo: "Delle tue qualità",
       sopratitolo: "Lettera seconda",
-      luogo: "Napoli",
-      data: "Anno domini 2026",
+      luogo: "Il tuo animo",
+      data: "da sempre",
       apertura: "Sara,",
       testo: [
-        "esiste una categoria di persone che rende le stanze più abitabili soltanto entrandoci. Tu appartieni a quella categoria, e questa lettera esiste per dirtelo per iscritto, così che tu non possa più smentirmi.",
+        "esiste una categoria di persone che rende le stanze o gli scogli(forse dovrei smetterla di fare riferimenti agli scogli) più abitabili soltanto entrandoci. Tu appartieni a quella categoria, e questa lettera esiste per dirtelo per iscritto, così che tu non possa più smentirmi.",
         "Qui puoi raccontarle cosa ammiri di lei: lo studio, la testardaggine, il modo in cui tiene alle persone."
       ],
       chiusura: "Sempre tuo amico,",
-      firma: "Vincenzo"
+      firma: "Penny"
     },
     {
       titolo: "Auguri, finalmente",
       sopratitolo: "Lettera terza",
-      luogo: "Napoli",
+      luogo: "Nereis",
       data: "Il giorno del tuo compleanno",
       apertura: "Alla festeggiata,",
       testo: [
@@ -66,7 +68,7 @@ const CONTENUTI = {
         "Buon compleanno."
       ],
       chiusura: "Con tutto il bene possibile,",
-      firma: "Vincenzo"
+      firma: "Penny"
     }
   ],
 
@@ -121,15 +123,15 @@ const CONTENUTI = {
   blasone: {
     mostra: true,
     casata: "Casa Sara",
-    motto: "Con mano ferma e cuore chiaro",
+    motto: "Fuoco e Sangue",
     lettura: [
       { simbolo: "Il caduceo", significato: "la medicina, e le notti passate sui libri." },
       { simbolo: "La viola",   significato: "il colore che rivendichi da sempre." },
       { simbolo: "Il compasso", significato: "la matematica, unica lingua che non mente." },
       { simbolo: "La penna",   significato: "l'arte, e le cose fatte a mano." }
     ],
-    // Piccola curiosità matematica mostrata in fondo allo stemma.
-    curiosita: "Le proporzioni di questo stemma seguono la sezione aurea: φ = 1,6180339887…"
+    // Piccola curiosità matematica(Le proporzioni di questo stemma seguono la sezione aurea: φ = 1,6180339887…) mostrata in fondo allo stemma.
+    curiosita: "Questo regalo l'ho fatto per il tuo compleanno in particolare, ma avrei intenzione di usarlo come base per tutti i nostri ricordi e lettere future se ti piace l'idea."
   },
 
   /* --- CONGEDO ---------------------------------------------------------- */
@@ -137,8 +139,8 @@ const CONTENUTI = {
     titolo: "Fine della stagione",
     testo: [
       "Qui finisce la cronaca, ma non il resto.",
-      "Se sei arrivata fin qui, hai letto tutto: era esattamente quello che speravo."
+      "Se sei arrivata fin qui, hai letto tutto o hai saltato tutto fino a questo punto: in ogni caso, spero di averti fatto sorridere."
     ],
-    firma: "Vincenzo"
+    firma: "Penny"
   }
 };
