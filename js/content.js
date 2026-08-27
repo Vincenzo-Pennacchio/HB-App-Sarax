@@ -35,9 +35,9 @@ const CONTENUTI = {
       data: "Credo 2016",
       apertura: "Mia carissima Sara,",
       testo: [
-        "scrivo queste righe con la mano che trema appena, come si conviene a chi si accinge a raccontare qualcosa di importante. La prima volta che ci siamo conosciuti è stata una di quelle occasioni che non si dimenticano: ovvero un uscita random in piazzetta della pace quando ancora esisteva il gruppo no name no(chi sa che fine hanno fatto). Eppure, nonostante la casualità dell'incontro, ricordo distintamente il tuo sorriso e la tua risata contagiosa e le tue urla da ubriaca. Da quel momento, all'inizio però non mi piacevi, perchè ero/sono timido e non sapevo come comportarmi con te, ma poi ho iniziato a notare le tue qualità e a capire che eri una persona speciale.",
+        "scrivo queste righe con la mano che trema appena, come si conviene a chi si accinge a raccontare qualcosa di importante e mi sono alzato dalla sedia più di trecento volte cercando di trovare le parole giuste e di ricordarmi vari avvenimenti del passato. La prima volta che ci siamo conosciuti è stata una di quelle occasioni che non si dimenticano: ovvero un uscita random in piazzetta della pace quando ancora esisteva il gruppo no name no(chi sa che fine hanno fatto). Eppure, nonostante la casualità dell'incontro, ricordo distintamente il tuo sorriso e la tua risata contagiosa e le tue urla da ubriaca. Da quel momento, all'inizio però non mi piacevi, perchè ero/sono timido e non sapevo come comportarmi con te, ma poi ho iniziato a notare le tue qualità e a capire che eri una persona speciale.",
         "Da allora, ogni volta che ci siamo visti, ho avuto la fortuna di conoscerti meglio e di apprezzare la tua intelligenza, la tua gentilezza e il tuo senso dell'umorismo. Sei una persona che sa ascoltare, che sa dare consigli saggi e che sa far sentire gli altri a proprio agio. La tua presenza rende le giornate più luminose e le conversazioni più interessanti. Quindi sono molto felice di essermi sbagliato sul tuo conto.",
-        "Da quando ci siamo conosciuti è stato bello vedere quante cose abbiamo in comune come game of thrones, i quattro bianchi(ok forse non più adesso però comunque), lady bug, Follettina creation, Renny, il condividere le passioni e i nostri sogni mentre eravamo sdraiati sugli scogli di Via Napoli, e anche le differenze che ci rendono unici. Abbiamo condiviso momenti di gioia, di risate, di avventure e anche i momenti di silenzio e di dolore, e sono grato per ogni singolo ricordo che abbiamo creato insieme.",
+        "Da quando ci siamo conosciuti è stato bello vedere quante cose abbiamo in comune come game of thrones, i quattro bianchi(ok forse non più adesso però comunque), lady bug, Follettina creation, Renny, death note, lupus in fabula, il condividere le passioni e i nostri sogni mentre eravamo sdraiati sugli scogli di Via Napoli, e anche le differenze che ci rendono unici. Abbiamo condiviso momenti di gioia, di risate, di avventure e anche i momenti di silenzio e di dolore, e sono grato per ogni singolo ricordo che abbiamo creato insieme.",
         "In conclusione, voglio dirti che sono grato per averti incontrata e per aver avuto l'opportunità di conoscerti meglio. Spero che la nostra amicizia continui a crescere e a rafforzarsi nel tempo anche se so che non ci vediamo praticamente mai non importa voglio che tu sappia che puoi sempre contare su di me come io conto su di te."
       ],
       chiusura: "Con devoto affetto,",
@@ -52,10 +52,13 @@ const CONTENUTI = {
       apertura: "Sara,",
       testo: [
         "esiste una categoria di persone che rende le stanze o gli scogli(forse dovrei smetterla di fare riferimenti agli scogli) più abitabili soltanto entrandoci. Tu appartieni a quella categoria, e questa lettera esiste per dirtelo per iscritto, così che tu non possa più smentirmi.",
-        "Qui puoi raccontarle cosa ammiri di lei: lo studio, la testardaggine, il modo in cui tiene alle persone."
+        "Il tuo sorriso è contagioso, la tua risata è un balsamo per l'anima e la tua gentilezza è un faro che illumina le vite di chi ti circonda. La tua intelligenza e la tua curiosità sono fonte di ispirazione, e la tua capacità di ascoltare e comprendere gli altri è un dono raro e prezioso per non parlare di come tu riesca ad andare avanti con gli studi e il lavoro senza sosta.",
+        "So che non deve essere facile mantenere standard così alti senza mai perdere la tua umanità e la tua empatia, ma tu ci riesci con grazia e determinazione. La tua forza interiore è ammirabile, e la tua capacità di affrontare le sfide della vita con coraggio e resilienza è un esempio da seguire.",
+        "In sintesi, Sara, sei una persona straordinaria e sono grato di averti nella mia vita. Spero che tu possa continuare a coltivare le tue qualità uniche e a condividere la tua luce con il mondo."
       ],
       chiusura: "Sempre tuo amico,",
-      firma: "Penny"
+      firma: "Penny",
+      poscritto: "P.S. — Non so se ti ricordi, ma una volta mi hai detto che ti piacevano i regali fatti a mano. Spero che queste lettere ti abbiano fatto sorridere almeno un po', perché è stato il mio intento principale nel scriverle."
     },
     {
       titolo: "Auguri, finalmente",
@@ -64,11 +67,12 @@ const CONTENUTI = {
       data: "Il giorno del tuo compleanno",
       apertura: "Alla festeggiata,",
       testo: [
-        "e dunque siamo arrivati al punto. Che questo anno ti porti esami superati, mani ferme, pazienti fortunati ad averti e almeno un ballo di cui varrà la pena parlare.",
+        "e dunque siamo arrivati al punto. Che questo anno ti porti esami superati, mani ferme, pazienti fortunati ad averti oppure studenti nel caso tu voglia intraprendere un percorso accademico per diventare maestra.",
         "Buon compleanno."
       ],
       chiusura: "Con tutto il bene possibile,",
-      firma: "Penny"
+      firma: "Penny",
+      poscritto: "P.S. — Spero che questo regalo ti piaccia, l'ho fatto con tanto affetto e dedizione. E spero che tu possa apprezzare il tempo e l'impegno che ho messo nel creare qualcosa di speciale per te."
     }
   ],
 
@@ -141,6 +145,7 @@ const CONTENUTI = {
       "Qui finisce la cronaca, ma non il resto.",
       "Se sei arrivata fin qui, hai letto tutto o hai saltato tutto fino a questo punto: in ogni caso, spero di averti fatto sorridere."
     ],
-    firma: "Penny"
+    firma: "Penny",
+    poscritto: "P.S. — Auguriiii."
   }
 };
